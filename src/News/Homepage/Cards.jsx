@@ -2,6 +2,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Card, Spinner } from "react-bootstrap";
 import axios from "axios";
+import Searchs from "./Searchs";
 
 export default class Cards extends React.Component{
   state = {
@@ -14,6 +15,7 @@ export default class Cards extends React.Component{
         const news = res.data.articles;
 
         this.setState({ news });
+        
       }).catch(e => {
         console.log(e)
       }).then(()=>{
@@ -21,9 +23,11 @@ export default class Cards extends React.Component{
       })
   }
 
+ 
+
   render() {
     return (
-     
+          
           this.state.news
             .map(person =>
               <Card  className="col-md-4 my-5">
@@ -36,11 +40,11 @@ export default class Cards extends React.Component{
                 </Card.Text>
                 <Button variant="primary" href={person.url} target="_blank">Read More</Button>
               </Card.Body>
-            </Card>
+            </Card>) 
             
             )
        
-    )
+    
   }
 
 }

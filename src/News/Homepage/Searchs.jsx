@@ -31,23 +31,23 @@ export default class Searchs extends React.Component{
 render(){
     return( 
       
-      <form onSubmit={this.handleSubmit}>
+             <form onSubmit={this.handleSubmit}>
           
-      <InputGroup className="mb-3 mt-5 " id="src" name="key"
-       >
-<FormControl Style placeholder="Search News" name="key" type= "text"
-onChange ={e => this.setState({key: e.target.value}) } />
-<InputGroup.Text id="basic-addon2"> <button type="submit">Search</button> </InputGroup.Text>
-</InputGroup>
+          <InputGroup className="mb-3 mt-5 " id="src" name="key"
+           >
+    <FormControl Style placeholder="Search News" name="key" type= "text"
+    onChange ={e => this.setState({key: e.target.value}) } />
+    <InputGroup.Text id="basic-addon2"> <button type="submit">Search</button> </InputGroup.Text>
+  </InputGroup>
 
-
-</form>
+  
+  </form>
             
-            )
+            
            
   
        
-    
+    )
 }
 
 }

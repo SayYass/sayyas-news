@@ -13,7 +13,7 @@ render(){
                 <Navbars/>
                 <br />
                 <div className="container row">
-                 <Searchs/>
+                 
 
                  <div className="row">
                  <Cards />     
